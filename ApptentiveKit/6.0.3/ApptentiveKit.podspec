@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/apptentive/apple-sdk.git", :tag => spec.version }
   spec.source_files  = "Sources/ApptentiveKit/**/*.{swift}"
-  spec.resources = "Sources/ApptentiveKit/localization/*.lproj", "Sources/ApptentiveKit/**/*.{png,xcassets}"
+  spec.resources = "Sources/ApptentiveKit/localization/*.lproj", "Sources/ApptentiveKit/**/*.{png}"
   spec.frameworks = "StoreKit", "UIKit", "Foundation", "OSLog"
 
 end
