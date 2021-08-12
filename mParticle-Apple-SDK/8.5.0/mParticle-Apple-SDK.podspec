@@ -69,4 +69,3 @@ Pod::Spec.new do |s|
         ext.tvos.frameworks      = 'AdSupport', 'CoreGraphics', 'Foundation', 'Security', 'SystemConfiguration', 'UIKit'
     end
 end
-
