@@ -7,10 +7,14 @@ Pod::Spec.new do |spec|
   spec.swift_version    = "5.5"
   spec.author           = { 'Apptentive SDK Team' => 'sdks@apptentive.com' }
   spec.platform         = :ios, "15.0"
-  spec.source           = { :git => "https://github.com/apptentive/apptentive-kit-ios-private.git", :tag => "v7.0.0-rc5" }
+  spec.source           = { :git => "https://github.com/apptentive/apptentive-kit-ios-private.git", :tag => "v7.0.0-rc6" }
   spec.source_files     = "Sources/ApptentiveKit/**/*.{swift,h,m}"
   spec.public_header_files = []
   spec.resource_bundles = { "ApptentiveKitResources" => [ "Sources/ApptentiveKit/Resources/*.lproj", "Sources/ApptentiveKit/Resources/Media.xcassets", "Sources/ApptentiveKit/Resources/Distribution.plist", "Sources/ApptentiveKit/Resources/PrivacyInfo.xcprivacy" ] }
   spec.frameworks       = "StoreKit", "UIKit", "Foundation", "OSLog"
-  spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+  spec.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES',
+    'SWIFT_COMPILATION_MODE' => 'wholemodule'
+  }
+  spec.module_name = 'ApptentiveKit'
 end
